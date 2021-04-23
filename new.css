@@ -1,0 +1,286 @@
+@import url(http://fonts.googleapis.com/css?family=Audiowide:400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 96px;
+}
+
+.header {
+  font-family: "Audiowide", Arial, Helvetica, sans-serif;
+  padding: 80px; /* some padding */
+  text-align: center; /* center the text */
+  background: #86c232; /* green background */
+  color: #f2f2f2; /* white text color */
+}
+
+/* Increase the font size of the <h1> element */
+h1 {
+  font-size: 40px;
+  text-decoration: none;
+  background-image: linear-gradient(#474b4f, #222629),
+  linear-gradient(#75c407, #86c232),
+  linear-gradient(#474b4f, #222629);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1s linear, background-position 1s linear;
+  cursor: pointer;
+}
+
+h1:hover {
+  color: #222629;
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+}
+
+h1 a {
+  color: #f2f2f2;
+}
+
+h1 a:hover {
+  color: #222629;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #222629; /* Dark background color
+  background-image: linear-gradient(#222629, #474b4f, #d4d4d4, #474b4f, #222629); */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: #d6ce15; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #6b6e70; /* Grey background color */
+  color: #86c232; /* Black text color */
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 33%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.side h2 {
+  text-align: center;
+}
+
+
+#tony {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:  200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+#blanca {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:  600px;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Main column */
+.main {
+  text-align: center;
+  flex: 67%; /* Set the width of the main content */
+  background-color: #6b6e70; /* White background color */
+  height: 100vh;
+  padding: 20px; /* Some padding */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+abbr {
+  color: #61892f;
+  font-weight: 600; 
+  text-decoration: none;
+  background-image: linear-gradient(#222629, #000000),
+  linear-gradient(#75c407, #61892f),
+  linear-gradient(#8ff500, #61892f);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.75s linear, background-position 0.75s linear;
+  cursor: pointer;
+}
+
+abbr:hover {
+  color: #a4a71e;
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+}
+
+.row a {
+  color: #61892f;
+  font-weight: 600; 
+  text-decoration: none;
+  background-image: linear-gradient(#222629, #000000),
+  linear-gradient(#75c407, #61892f),
+  linear-gradient(#8ff500, #61892f);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.75s linear, background-position 0.75s linear;
+  cursor: pointer;
+}
+
+.row a:hover {
+  color: #a4a71e;
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+}
+
+.img {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px; /* Some padding */
+  text-align: center; /* Center text*/
+  background: #474b4f; /* Grey background */
+  position: absolute;
+  bottom: 0;
+  min-width: 100vw;
+}
+
+.footer a{
+  color: #222629;
+  font-size: x-large;
+  text-decoration: none;
+  background-image: linear-gradient(#474b4f, #222629),
+  linear-gradient(#75c407, #61892f),
+  linear-gradient(#8ff500, #61892f);
+  background-size: 0px 2px, 100% 0px, 0 2px;
+  background-position: calc(20px * -1) 0%, 100% 0%, 0 0%;
+  background-repeat: no-repeat;
+  transition: font-size .5s ease-in-out, background-size 0.5s linear, background-position 0.5s linear;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  background-size: 0px 2px, 0 0px, 100% 2px;
+  background-position: calc(100% + 20px) 0%, 100% 0%, 0 0%;
+  font-size:2.5em;
+  transition: .5s ease-in-out;
+}
+
+#gmail:hover {
+  color:#DB4437;
+}
+
+#linkedin:hover {
+  color: #0072b1;
+}
+
+#github:hover {
+  color: #211f1f;
+}
+
+#facebook:hover {
+  color: #3b5998;
+}
+
+#reddit:hover {
+  color: #ff4500;
+}
+
+#twitter:hover {
+  color: #00acee;
+}
+
+#soundcloud:hover {
+  color: #ff7700;
+}
+
+.footer .coffee{
+  color: #222629;
+  text-decoration: none;
+  font-variant: small-caps;
+  font-size: large;
+  background-image: linear-gradient(#8ff500, #61892f),
+  linear-gradient(#474b4f, #222629),
+  linear-gradient(#474b4f, #222629);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 0%, 100% 0%, 0 0%;
+  background-repeat: no-repeat;
+  transition: background-size .65s linear, background-position .65s linear;
+  cursor: default;
+}
+
+.footer .coffee:hover{
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 0%, 100% 0%, 0 0%;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background-color: #8ff500;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.65s ease-in-out 0s;
+}
+
+.footer:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
