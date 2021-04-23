@@ -229,7 +229,7 @@ abbr:hover {
 }
 
 #github:hover {
-  color: #211f1f;
+  color: #211f1f !important;
 }
 
 #facebook:hover {
@@ -284,4 +284,12 @@ abbr:hover {
 .footer:hover::before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+#footflex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  align-content: stretch;
+  min-width: 100vw;
 }
