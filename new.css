@@ -209,7 +209,7 @@ abbr:hover {
   background-size: 0px 2px, 100% 0px, 0 2px;
   background-position: calc(20px * -1) 0%, 100% 0%, 0 0%;
   background-repeat: no-repeat;
-  transition: font-size .5s ease-in-out, background-size 0.5s linear, background-position 0.5s linear;
+  transition: font-size .5s ease-in-out, background-size 0.5s linear, background-position 0.5s linear transform 1s;
   cursor: pointer;
 }
 
@@ -218,33 +218,48 @@ abbr:hover {
   background-position: calc(100% + 20px) 0%, 100% 0%, 0 0%;
   font-size:2.5em;
   transition: .5s ease-in-out;
+  transform: rotate(360deg);
 }
 
-#gmail:hover {
-  color:#DB4437;
+#gmail .fa-google:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
+  color:#DB4437 !important;
 }
 
-#linkedin:hover {
-  color: #0072b1;
+#linkedin .fa-linkedin:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
+  color: #0072b1 !important;
 }
 
 #github:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
   color: #211f1f !important;
 }
 
-#facebook:hover {
-  color: #3b5998;
+#facebook .fa-facebook-official:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
+  color: #3b5998 !important;
 }
 
-#reddit:hover {
-  color: #ff4500;
+#reddit .fa-reddit:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
+  color: #ff4500 !important;
 }
 
-#twitter:hover {
-  color: #00acee;
+#twitter .fa-twitter:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
+  color: #00acee !important;
 }
 
 #soundcloud:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
   color: #ff7700;
 }
 
