@@ -6,3 +6,9 @@ document.getElementById("css1").addEventListener("click", function() {
 
 document.getElementById("js1").addEventListener("click", function() {
     alert(`JavaScript is the language of the web! It is a programming language used to make webpages more interactive and dynamic, allowing web designers to do things like, say, give you a definition when you click on a link! 😉JavaScript, combined with HTML and CSS, makes the World Wide Web what it is today.`);});
+
+document.getElementById("gmail").addEventListener('mouseover', function(){
+    gmail.style.fontsize = '2.5em';});
+
+document.getElementById("gmail").addEventListener('mouseleave', function(){
+    gmail.style.fontsize = 'x-large';;});

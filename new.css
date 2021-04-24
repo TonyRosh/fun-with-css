@@ -53,8 +53,7 @@ h1 a:hover {
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden; /* Hide overflow */
-  background-color: #222629; /* Dark background color
-  background-image: linear-gradient(#222629, #474b4f, #d4d4d4, #474b4f, #222629); */
+  background-color: #222629; /* Dark background color*/
 }
 
 /* Style the navigation bar links */
@@ -124,6 +123,7 @@ h1 a:hover {
   flex: 67%; /* Set the width of the main content */
   background-color: #6b6e70; /* White background color */
   height: 100vh;
+  width: 100%;
   padding: 20px; /* Some padding */
   overflow-x: hidden;
   overflow-y: auto;
@@ -148,7 +148,7 @@ abbr {
   color: #61892f;
   font-weight: 600; 
   text-decoration: none;
-  background-image: linear-gradient(#222629, #000000),
+  background-image: linear-gradient(#474b4f, #222629),
   linear-gradient(#75c407, #61892f),
   linear-gradient(#8ff500, #61892f);
   background-size: 20px 2px, 100% 2px, 0 2px;
@@ -168,7 +168,7 @@ abbr:hover {
   color: #61892f;
   font-weight: 600; 
   text-decoration: none;
-  background-image: linear-gradient(#222629, #000000),
+  background-image: linear-gradient(#474b4f, #222629),
   linear-gradient(#75c407, #61892f),
   linear-gradient(#8ff500, #61892f);
   background-size: 20px 2px, 100% 2px, 0 2px;
@@ -209,56 +209,92 @@ abbr:hover {
   background-size: 0px 2px, 100% 0px, 0 2px;
   background-position: calc(20px * -1) 0%, 100% 0%, 0 0%;
   background-repeat: no-repeat;
-  transition: font-size .5s ease-in-out, background-size 0.5s linear, background-position 0.5s linear transform 1s;
+  transition: background-size 0.5s linear, background-position 0.5s linear transform 1s;
   cursor: pointer;
 }
 
 .footer a:hover {
   background-size: 0px 2px, 0 0px, 100% 2px;
   background-position: calc(100% + 20px) 0%, 100% 0%, 0 0%;
-  font-size:2.5em;
   transition: .5s ease-in-out;
   transform: rotate(360deg);
 }
 
+#wrapper a {
+  transition: transform .5s, font-size .5s ease-in-out;
+}
+
+#wrapper a:hover {
+  font-size: xx-large;
+  transform: scale(1.5);
+}
+
+#gmail .fa-google {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #gmail .fa-google:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color:#DB4437 !important;
 }
 
+#linkedin .fa-linkedin {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #linkedin .fa-linkedin:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color: #0072b1 !important;
 }
 
+#github {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #github:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color: #211f1f !important;
 }
 
+#facebook .fa-facebook-official {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #facebook .fa-facebook-official:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color: #3b5998 !important;
 }
 
+#reddit .fa-reddit {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #reddit .fa-reddit:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color: #ff4500 !important;
 }
 
+#twitter .fa-twitter {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #twitter .fa-twitter:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color: #00acee !important;
 }
 
+#soundcloud {
+  transition: transform .75s ease-in-out;
+  transition-delay: .25s;
+}
+
 #soundcloud:hover {
-  transition: transform 1s;
   transform: rotate(360deg);
   color: #ff7700;
 }
@@ -290,7 +326,7 @@ abbr:hover {
   height: 10px;
   bottom: 0;
   left: 0;
-  background-color: #8ff500;
+  background-image: linear-gradient(#a7ff2c, #8ff500, #61892f, #42611d, #222629, #61892f);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.65s ease-in-out 0s;
@@ -299,12 +335,4 @@ abbr:hover {
 .footer:hover::before {
   visibility: visible;
   transform: scaleX(1);
-}
-
-#footflex {
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: row;
-  align-content: stretch;
-  min-width: 100vw;
 }
