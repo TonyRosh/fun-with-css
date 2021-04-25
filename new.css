@@ -62,7 +62,7 @@ h1 a:hover {
 .navbar a {
   float: left; /* Make sure that the links stay side-by-side */
   display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: #d6ce15; /* White text color */
+  color: #61892f; /* White text color */
   text-align: center; /* Center the text */
   padding: 14px 20px; /* Add some padding */
   text-decoration: none; /* Remove underline */
@@ -73,10 +73,30 @@ h1 a:hover {
   float: right; /* Float a link to the right */
 }
 
+.navbar a.right:hover {
+  background-color: #6b6e70;
+}
+
 /* Change color on hover/mouse-over */
 .navbar a:hover {
-  background-color: #6b6e70; /* Grey background color */
-  color: #86c232; /* Black text color */
+  background-color: #f1f1f1; /* Grey background color */
+  color: #222629; /* Black text color */
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(1deg); }
+  10% { transform: translate(-1px, -2px) rotate(-2deg); }
+  20% { transform: translate(-3px, 0px) rotate(0deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-3deg); }
+  60% { transform: translate(-3px, 1px) rotate(-1deg); }
+  70% { transform: translate(3px, 1px) rotate(-2deg); }
+  80% { transform: translate(-1px, -1px) rotate(0deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -3px) rotate(-1deg); }
 }
 
 /* Column container */
@@ -110,6 +130,11 @@ h1 a:hover {
   object-fit: contain;
 }
 
+#video {
+  display: flex;
+  align-items: center;
+}
+
 #blanca {
   display: block;
   margin-left: auto;
@@ -135,6 +160,12 @@ h1 a:hover {
 @media screen and (max-width: 700px) {
   .row {
     flex-direction: column;
+  }
+
+  .row {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
@@ -336,7 +367,7 @@ abbr:hover {
   height: 10px;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(#a7ff2c, #8ff500, #61892f, #42611d, #222629, #61892f);
+  background-image: linear-gradient(#a7ff2c, #8ff500, #8fda27, #7dbe21, #75b122, #61892f, #42611d, #222629, #141516, #080808, #61892f);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.65s ease-in-out 0s;
