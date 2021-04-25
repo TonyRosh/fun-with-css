@@ -211,7 +211,7 @@ abbr:hover {
   background-position: calc(20px * -1) 0%, 100% 0%, 0 0%;
   background-repeat: no-repeat;
   cursor: pointer;
-  padding-top: .15em;
+  padding-top: .14em;
 }
 
 .footer a:hover {
